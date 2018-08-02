@@ -1,0 +1,12 @@
+git pull
+git add -A
+git add .
+git push
+php bin/console make:entity
+php bin/console make:migration
+php bin/console doctrine:migrations:migrate
+git clone https://github.com/creemaboite/zoubida.git
+composer install
+git checkout entity-created
+git commit -m "migration: add entity Lessons table"
+git commit -m "dev: created new Controller -DefaultController"
